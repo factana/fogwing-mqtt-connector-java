@@ -22,23 +22,24 @@ public class Fw_mqtt_main
     public static void main( String[] args )throws MqttException, InterruptedException 
     {
     	try {
-    	Fw_mqtt_class fw_mqtt= new Fw_mqtt_class();
-    	Random random = new Random();  
-        Map<String, Float> obj=new HashMap<String, Float>();
+		Fw_mqtt_class fw_mqtt= new Fw_mqtt_class();
+		// Generating random values for sample payload
+		Random random = new Random();  
+		Map<String, Float> obj=new HashMap<String, Float>();
 		float temp =random.nextFloat(20, 30);
 		float hum =random.nextFloat(40, 100);
 		float pressure =random.nextFloat(1000, 2000);
 		obj.put("Temperature", temp); 
-        obj.put("Humidity", hum);
-        obj.put("Pressure", pressure);
-        String jsonText = JSONValue.toJSONString(obj);
+		obj.put("Humidity", hum);
+		obj.put("Pressure", pressure);
+		String jsonText = JSONValue.toJSONString(obj);
         
-        // Publish data to Fogwing IIoT
+        	// Publish data to Fogwing IIoT
 		fw_mqtt.publish(jsonText);
 		fw_mqtt.close();
     	}
     	catch(MqttException me) {
-            me.printStackTrace();
+            	me.printStackTrace();
         }
     }
 }
