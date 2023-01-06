@@ -9,10 +9,10 @@
 - [Setup Eclipse IDE for Java Developers](https://www.eclipse.org/downloads/packages/installer).
 
 ### Step: 2
-- Download [fw_IIoT_mqtt_pub]() to publish once, Download [fw_IIoT_mqtt_pubsub]() to publish data in interval and also to subscribe.
+- Download [fw_IIoT_mqtt_pub](https://github.com/factana/fogwing-mqtt-connector-java/tree/main/fw_IIoT_mqtt_pub) to publish once, Download [fw_IIoT_mqtt_pubsub](https://github.com/factana/fogwing-mqtt-connector-java/tree/main/fw_IIoT_mqtt_pubsub) to publish data in interval and also to subscribe.
 
 ### Step: 3
-- Unzip the file and open Eclipse IDE -> Open projects from files system -> Choose the right folder and Enter the [Fogwing](https://portal.fogwing.net/) IoTHub credentials and set `public static int interval` to publish data with time interval.
+- Unzip the file and open Eclipse IDE -> Open projects from files system -> Choose the right folder and Enter the [Fogwing](https://portal.fogwing.net/) IoTHub credentials in **Fw_mqtt_main** and set `public static int interval` in to publish data with time interval.
 
 ### Step: 4
 -  Run the client.
